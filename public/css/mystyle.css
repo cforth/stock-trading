@@ -1,0 +1,59 @@
+body {
+  width:780px;
+  margin:0 auto;
+  font-family: \5FAE\8F6F\96C5\9ED1;
+  background:#FFFFFF;  
+}
+
+p {
+  line-height: 180%;
+}
+
+a:link {
+  color:#4169E1;
+  font-weight:bold;
+  text-decoration: none;
+}
+
+a:visited {
+  color:#4169E1;
+  font-weight:bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#FF4500;
+  text-decoration:underline;
+}
+
+h1 {
+  margin:0;
+  font-size:45px;
+}
+
+h2 {
+  margin-bottom:0;
+  font-size:35px;
+}
+
+h3 {
+  margin-bottom:0;
+  font-size:25px;
+}
+
+ul {
+  margin:0;
+}
+
+div#text {
+  background-color:#F5F5F5;
+  border-style:none;
+  padding:10px;
+  min-height:500px; //（解决ie8.9.ff.chrome）
+  *+height:100%;  //（解决ie7）
+  _height:500px; //（解决ie6） ie6超出自动溢出
+}
+
+div#footer {
+  text-align:center;
+}
