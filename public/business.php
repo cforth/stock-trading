@@ -1,6 +1,7 @@
 <?php 
     // enable sessions
   session_start();
+  $prompt = " ";
   
   if(isset($_SESSION["authenticated"])) {
     // connect to database
@@ -25,9 +26,9 @@
                 mysql_real_escape_string($_POST["wtfx"]));
         $sql_insert = mysql_query($sql);
         if ($sql_insert === false) { 
-          print("<p>委托失败！");
+          $prompt ="委托失败！";
         } else {
-          print("<p>委托成功！");
+          $prompt = "委托成功！";
         }
       } else {
         die("无此用户");
@@ -71,10 +72,14 @@
         </tr>
       </table>      
     </form>  
+    
+    <p><?php print($prompt) ?></p>
+    
+    <ul>
+      <li><a href="home.php">回主页面</a></li>
+    </ul>
 
-    <a href="home.php">回主页面</a>
-
-    <p>历史委托明细:</p>
+    <h2>历史委托明细:</h2>
     <?php
       $sql_result = mysql_query(sprintf("SELECT 1 FROM users WHERE user='%s'", $_SESSION["user"]));
       

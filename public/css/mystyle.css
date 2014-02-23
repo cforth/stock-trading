@@ -1,8 +1,32 @@
-body {
-  width:780px;
+* {
+  margin:0;
+  padding:0;
+}
+
+div#header {
+  height:50px;
+  background-color:#F1F1F1;
+  color:#0066CC;
+  border-style:none;
+  text-align:center;
+  /*text-indent:10px;*/
+  margin-bottom:10px;
+}
+
+div#text {
+  width:800px;
   margin:0 auto;
+  height:auto!important;
+  min-height:800px;
+}
+
+div#footer {
+  text-align:center;
+  background-color:#F1F1F1;
+}
+
+body {
   font-family: \5FAE\8F6F\96C5\9ED1;
-  background:#FFFFFF;  
 }
 
 p {
@@ -26,34 +50,13 @@ a:hover {
   text-decoration:underline;
 }
 
-h1 {
-  margin:0;
-  font-size:45px;
-}
-
-h2 {
-  margin-bottom:0;
-  font-size:35px;
-}
-
-h3 {
-  margin-bottom:0;
-  font-size:25px;
-}
 
 ul {
   margin:0;
 }
 
-div#text {
-  background-color:#F5F5F5;
-  border-style:none;
-  padding:10px;
-  min-height:500px; //（解决ie8.9.ff.chrome）
-  *+height:100%;  //（解决ie7）
-  _height:500px; //（解决ie6） ie6超出自动溢出
+li {
+  list-style:none;
+  font-size:25px;
 }
 
-div#footer {
-  text-align:center;
-}

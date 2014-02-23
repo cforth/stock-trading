@@ -8,4 +8,7 @@
 </head> 
 
 <body>
+  <div id="header">
+    <h1>股 票 模 拟 交 易</h1>
+  </div>
   <div id="text">

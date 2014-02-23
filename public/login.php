@@ -1,6 +1,7 @@
 <?php
     // enable sessions
     session_start();
+    $prompt = " ";
 
     // if username and password were submitted, check them
     if (isset($_POST["user"]) && isset($_POST["pass"]))
@@ -38,7 +39,7 @@
             header("Location: http://$host$path/home.php");
             exit;
         } else {
-          print "用户名或密码错误！！";
+          $prompt =  "用户名或密码错误！！";
         }
     }
 
@@ -61,9 +62,12 @@
           <td><input type="submit" value="登陆"></td>
         </tr>
       </table>      
+      <p><?php print($prompt) ?></p>
     </form>
-
-    <a href="home.php">回主页面</a>
+    
+    <ul>
+      <li><a href="home.php">回主页面</a></li>
+    </ul>
 
 <?php
   require '../module/footer.php';

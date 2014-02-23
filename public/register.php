@@ -1,6 +1,7 @@
 <?php
     // enable sessions
     session_start();
+    $prompt = " ";
 
     // if username and password were submitted, check them
     if (isset($_POST["user"]) && isset($_POST["pass"]))
@@ -41,7 +42,7 @@
             exit;
           }
         } else {
-          print "用户名已存在，请重新输入";
+          $prompt = "用户名已存在，请重新输入";
         }
     
     }
@@ -67,7 +68,11 @@
       </table>      
     </form>
 
-    <a href="home.php">回主页面</a>
+    <p><?php print($prompt) ?></p>
+    
+    <ul>
+      <li><a href="home.php">回主页面</a></li>
+    </ul>
 
 <?php
   require '../module/footer.php';

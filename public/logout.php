@@ -13,7 +13,9 @@
 ?>
 
     <h1>您已经登出!</h1>
-    <a href="home.php">回主页面</a>
+    <ul>
+      <li><a href="home.php">回主页面</a></li>
+    </ul>
 
 <?php
   require '../module/footer.php';
