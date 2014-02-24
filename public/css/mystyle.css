@@ -42,6 +42,7 @@ div#footer {
   width:800px;
   border:0;
   text-align:center;
+  float:left;
 }
 
 body {

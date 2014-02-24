@@ -18,6 +18,7 @@
     <br />
     <ul>
       <li><a href="home.php">主页面</a></li>
+      <li><a href="quotes.php">行情</a></li>
       <li><a href="business.php">交易</a></li>
     </ul>
   </div>
