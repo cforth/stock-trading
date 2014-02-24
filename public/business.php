@@ -77,6 +77,15 @@
     
 
     <h2>历史委托明细:</h2>
+    <table>
+    <tr>
+      <td>委托合同号</td>
+      <td>委托方向</td>
+      <td>股票代码</td>
+      <td>委托数量</td>
+      <td>委托价格</td>
+      <td>委托时间</td>
+    </tr>
     <?php
       $sql_result = mysql_query(sprintf("SELECT 1 FROM users WHERE user='%s'", $_SESSION["user"]));
       
@@ -84,10 +93,11 @@
         $sql_user = mysql_fetch_array(mysql_query(sprintf("SELECT id FROM users WHERE user='%s'", $_SESSION["user"])));
         $lswt_array = mysql_query(sprintf("SELECT * FROM wtmx WHERE user_id = '%d'", $sql_user["id"]));
         while($lswt_rows = mysql_fetch_array($lswt_array)) {
-          print("<p>委托合同号:" . $lswt_rows["id"] . "  委托方向:" . $lswt_rows["wtfx"] . "  股票代码:" . $lswt_rows["gpdm"] . "  委托数量:" . $lswt_rows["wtsl"] . "  委托价格:" . $lswt_rows["wtjg"] . "  委托时间:". $lswt_rows["wtmx_time"] . "</p>");
+          print("<tr><td>" . $lswt_rows["id"] . "</td><td>" . $lswt_rows["wtfx"] . "</td><td>" . $lswt_rows["gpdm"] . "</td><td>" . $lswt_rows["wtsl"] . "</td><td>" . $lswt_rows["wtjg"] . "</td><td>". $lswt_rows["wtmx_time"] . "</td></tr>");
         }
       }
     ?>
+  </table>
 
 <?php
   require '../module/footer.php';
