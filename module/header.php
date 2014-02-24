@@ -11,4 +11,15 @@
   <div id="header">
     <h1>股 票 模 拟 交 易</h1>
   </div>
-  <div id="text">
+
+  <div id="page">
+  <div id="menu">
+    <h2>菜单</h2>
+    <br />
+    <ul>
+      <li><a href="home.php">主页面</a></li>
+      <li><a href="business.php">交易</a></li>
+    </ul>
+  </div>
+
+  <div id="main">

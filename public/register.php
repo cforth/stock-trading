@@ -50,6 +50,7 @@
   require '../module/header.php';
 ?>
 
+    <br />
     <form action="<?php  print($_SERVER["PHP_SELF"]) ?>" method="post">
       <table>
         <tr>
@@ -63,16 +64,13 @@
         </tr>
         <tr>
           <td></td>
-          <td><input type="submit" value="注册"></td>
+          <td><input type="submit" class="push" value="注册"></td>
         </tr>
       </table>      
     </form>
 
     <p><?php print($prompt) ?></p>
     
-    <ul>
-      <li><a href="home.php">回主页面</a></li>
-    </ul>
 
 <?php
   require '../module/footer.php';

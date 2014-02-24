@@ -45,7 +45,7 @@
    require '../module/header.php';
 ?>
 
-    <h1>交易</h1>
+    <h2>交易</h2>
 
     <form action="<?php  print($_SERVER["PHP_SELF"]) ?>" method="post">
       <select name="wtfx">
@@ -68,16 +68,13 @@
         </tr>
         <tr>
           <td></td>
-          <td><input type="submit" value="委托"></td>
+          <td><input type="submit"  class="push" value="委托"></td>
         </tr>
       </table>      
     </form>  
     
     <p><?php print($prompt) ?></p>
     
-    <ul>
-      <li><a href="home.php">回主页面</a></li>
-    </ul>
 
     <h2>历史委托明细:</h2>
     <?php

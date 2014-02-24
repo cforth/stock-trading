@@ -12,10 +12,7 @@
   require '../module/header.php'
 ?>
 
-    <h1>您已经登出!</h1>
-    <ul>
-      <li><a href="home.php">回主页面</a></li>
-    </ul>
+    <h2>您已经登出!</h2>
 
 <?php
   require '../module/footer.php';
