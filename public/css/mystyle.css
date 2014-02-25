@@ -5,7 +5,6 @@
 
 div#header {
   margin:0 auto;
-  width:800px;
   border:0;
   height:65px;
   background-color:#F1F1F1;
@@ -16,14 +15,14 @@ div#header {
 }
 
 div#page {
-  width:800px;
+  width:1000px;
   margin:10px;
   margin:0 auto;
   border-style:none;
 }
 
 div#menu {
-  width:150px;
+  width:100px;
   margin:0 auto;
   float:left;
   height:auto!important;
@@ -31,7 +30,7 @@ div#menu {
 }
 
 div#main {
-  width:650px;
+  width:900px;
   margin:0 auto;
   float:left;
   height:auto!important;
@@ -39,7 +38,7 @@ div#main {
 }
 
 div#footer {
-  width:800px;
+  width:1000px;
   border:0;
   text-align:center;
   float:left;
@@ -89,14 +88,36 @@ input.push {
   margin:5px;
 }
 
-table.wtmx {
+table,td,th {
+  border:1px solid #D6D9E0;
+}
+
+table {
   border-collapse:collapse;
+  width:100%;
 }
 
-td.wtmx{
-  border:1px solid black;
+td {
+  padding:2px;
 }
 
-tr.wtmx{
-  border:1px solid black;
+caption {
+  font-weight:bold;
+  text-align:left;
+  background-color:#F1F1F1;
+}
+
+#stocktable {
+  text-align:right;
+  font-weight:bold;
+}
+
+#sthead {
+  background-color:#D4EEFF;
+  font-weight:bold;
+}
+
+#indexhead {
+  font-weight:bold;
+  text-align:center;
 }
