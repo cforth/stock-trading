@@ -89,3 +89,14 @@ input.push {
   margin:5px;
 }
 
+table.wtmx {
+  border-collapse:collapse;
+}
+
+td.wtmx{
+  border:1px solid black;
+}
+
+tr.wtmx{
+  border:1px solid black;
+}

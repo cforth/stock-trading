@@ -4,7 +4,7 @@
     $prompt = " ";
 
     // if username and password were submitted, check them
-    if (isset($_POST["user"]) && isset($_POST["pass"]))
+    if (isset($_POST["user"]) && isset($_POST["pass1"]) && isset($_POST["pass2"]))
     {
 
         // connect to database
@@ -22,8 +22,8 @@
           // prepare SQL
           $sql = sprintf("INSERT INTO `users`(`user`, `pass`) VALUES ('%s' , AES_ENCRYPT('%s', '%s'))",
                        mysql_real_escape_string($_POST["user"]),
-                       mysql_real_escape_string($_POST["pass"]),
-                       mysql_real_escape_string($_POST["pass"]));
+                       mysql_real_escape_string($_POST["pass1"]),
+                       mysql_real_escape_string($_POST["pass1"]));
 
           // execute query
           $result = mysql_query($sql);
@@ -50,8 +50,32 @@
   require '../module/header.php';
 ?>
 
+    <script>
+
+        function validate()
+        {
+            if (document.forms.registration.user.value =="")
+            {
+                alert("用户名不能为空");
+                return false;
+            }
+            else if (document.forms.registration.pass1.value == "")
+            {
+                alert("密码不能为空");
+                return false;
+            }
+            else if (document.forms.registration.pass1.value != document.forms.registration.pass2.value)
+            {
+                alert("两次必须输入同样的密码");
+                return false;
+            }
+            return true;
+        }
+
+        </script>
+
     <br />
-    <form action="<?php  print($_SERVER["PHP_SELF"]) ?>" method="post">
+    <form action="<?php  print($_SERVER["PHP_SELF"]) ?>" method="post" name="registration" onsubmit="return validate();">
       <table>
         <tr>
           <td>用户名:</td>
@@ -59,8 +83,13 @@
             <input name="user" type="text"></td>
         </tr>
         <tr>
-          <td>密码:</td>
-          <td><input name="pass" type="text"></td>
+          <td>设置密码:</td>
+          <td><input name="pass1" type="text"></td>
+        </tr>
+        <tr>
+        <tr>
+          <td>确认密码:</td>
+          <td><input name="pass2" type="text"></td>
         </tr>
         <tr>
           <td></td>
