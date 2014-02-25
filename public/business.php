@@ -45,9 +45,31 @@
    require '../module/header.php';
 ?>
 
+    <script>
+
+        function validate()
+        {
+            if (!document.forms.business.gpdm.value.match(/^\d{6,6}$/))
+            {
+                alert("股票代码格式错误");
+                return false;
+            } else if (!document.forms.business.wtsl.value.match(/^([1-9][0-9]*)$/))
+            {
+                alert("股票数量格式错误");
+                return false;
+            } else if (!document.forms.business.wtjg.value.match(/^\d+(\.\d+)?$/))
+            {
+                alert("股票价格格式错误");
+                return false;
+            }
+            return true;
+        }
+
+      </script>
+
     <h2>交易</h2>
 
-    <form action="<?php  print($_SERVER["PHP_SELF"]) ?>" method="post">
+    <form action="<?php  print($_SERVER["PHP_SELF"]) ?>" method="post" name="business" onsubmit="return validate();">
       <select name="wtfx">
         <option value="b">买入</option>
         <option value="s">卖出</option>
